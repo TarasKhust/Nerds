@@ -1,2 +1,2 @@
-# barbershop
-Barbershop
+#Glassy
+                                                  Landing Page
