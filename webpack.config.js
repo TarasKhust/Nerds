@@ -15,6 +15,10 @@ let conf = {
         path: path.resolve(__dirname, 'dist'),
         // publicPath: 'dist/'
     },
+    devServer: {
+        overlay: true,
+        contentBase: 'dist'
+    },
     module: {
         rules: [
             {
