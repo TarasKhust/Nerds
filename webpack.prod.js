@@ -1,6 +1,6 @@
-let merge = require('webpack-merge');
-let config = require('./webpack.config.js');
-let CopyWebpackPlugin = require('copy-webpack-plugin');
+// let merge = require('webpack-merge');
+// let config = require('./webpack.config.js');
+// let CopyWebpackPlugin = require('copy-webpack-plugin');
 let path = require('path');
 let ExtractTextPlugin = require("extract-text-webpack-plugin");
 let glob = require('glob-all');
