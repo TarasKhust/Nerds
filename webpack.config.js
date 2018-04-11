@@ -64,15 +64,6 @@ let conf = {
                     // publicPath: '../'
                 })
             },
-            // {
-            //     test: /\.styl$/,
-            //     use: [
-            //         { loader: 'style-loader', options: { sourceMap: true } },
-            //         { loader: 'css-loader', options: { sourceMap: true } },
-            //         { loader: 'postcss-loader', options: { sourceMap: true } },
-            //         { loader: 'stylus-loader', options: { sourceMap: true } },
-            //     ]
-            // },
             {
                 test: /\.styl$/,
                 use: ExtractTextPlugin.extract({
@@ -89,36 +80,6 @@ let conf = {
                     'image-webpack-loader'
                 ]
             },
-            // {
-            //     test: /\.(gif|png|jpe?g|svg)$/i,
-            //     use: [
-            //         'file-loader?name=images/[name].[ext]',
-            //         {
-            //             loader: 'image-webpack-loader',
-            //             options: {
-            //                 mozjpeg: {
-            //                     progressive: true,
-            //                     quality: 85
-            //                 },
-            //                 // optipng.enabled: false will disable optipng
-            //                 optipng: {
-            //                     enabled: false,
-            //                 },
-            //                 pngquant: {
-            //                     quality: '90',
-            //                     speed: 4
-            //                 },
-            //                 gifsicle: {
-            //                     interlaced: false,
-            //                 },
-            //                 // the webp option will enable WEBP
-            //                 webp: {
-            //                     quality: 75
-            //                 }
-            //             }
-            //         },
-            //     ],
-            // },
             {
                 test: /\.(woff2?|ttf|eot|otf|svg)$/,
                 use: 'file-loader?name=fonts/[name].[ext]'
@@ -129,7 +90,7 @@ let conf = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Index',
-            template: './src/assets/pug/pages/index.pug',
+            template: './src/pug/pages/index.pug',
             hash: true,
             // excludeChunks: ['contact'],
             // minify: {
@@ -139,7 +100,7 @@ let conf = {
 
         new HtmlWebpackPlugin({
             title: 'Photo',
-            template: './src/assets/pug/pages/photo.pug',
+            template: './src/pug/pages/photo.pug',
             hash: true,
             filename: 'photo.html',
             // chunks: ['contact'],
@@ -149,7 +110,7 @@ let conf = {
 
         new HtmlWebpackPlugin({
             title: 'Form',
-            template: './src/assets/pug/pages/form.pug',
+            template: './src/pug/pages/form.pug',
             hash: true,
             // chunks: ['contact'],
             filename: 'form.html',
@@ -169,9 +130,9 @@ let conf = {
         new PurifyCSSPlugin({
             // paths: glob.sync(path.join(__dirname, 'src/*.pug')),
             paths: glob.sync([
-                path.join(__dirname, 'src/assets/pug/*.pug'),
-                path.join(__dirname, 'src/assets/pug/modules/*.pug'),
-                path.join(__dirname, 'src/assets/pug/pages/*.pug'),
+                path.join(__dirname, 'src/pug/**/*.pug'),
+                // path.join(__dirname, 'src/assets/pug/modules/*.pug'),
+                // path.join(__dirname, 'src/assets/pug/pages/*.pug'),
                 path.join(__dirname, 'src/assets/js/*.js')
             ]),
             purifyOptions: { info: true, minify: false }
