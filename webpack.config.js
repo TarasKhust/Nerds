@@ -5,15 +5,23 @@ let PurifyCSSPlugin = require('purifycss-webpack');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
 let webpack = require('webpack');
 
+let SRC_DIR = path.resolve(__dirname,'src');
+let DIST_DIR = path.resolve(__dirname, 'dist');
+let ASSET_PATH = process.env.ASSET_PATH || '';
+
 let conf = {
     entry: {
-        app: './src/app.js',
+        app: SRC_DIR + '/app.js',
         // contact: './src/contact.js',
     },
     output: {
-        filename: 'js/[name].js',
-        path: path.resolve(__dirname, 'dist'),
-        // publicPath: 'dist/'
+        path: DIST_DIR,
+        filename: '[name].bundle.js',
+        publicPath: ASSET_PATH
+    },
+    resolve: {
+        modules: [SRC_DIR, "node_modules"],
+        extensions: ['.js', '.css', '.scss']
     },
     devServer: {
         overlay: true,
