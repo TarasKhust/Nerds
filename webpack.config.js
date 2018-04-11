@@ -17,7 +17,7 @@ let conf = {
     },
     devServer: {
         overlay: true,
-        contentBase: 'dist'
+        // contentBase: 'dist'
     },
     module: {
         rules: [
@@ -73,44 +73,44 @@ let conf = {
                     // publicPath: '../'
                 })
             },
-            // {
-            //     test: /\.(jpg|png|gif|jpeg|svg)$/,
-            //     use: [
-            //         'file-loader?name=images/[name].[ext]',
-            //         // 'file-loader?name=[name].[ext]&outputPath=../images/&publicPath=.images/',
-            //         'image-webpack-loader'
-            //     ]
-            // },
             {
-                test: /\.(gif|png|jpe?g|svg)$/i,
+                test: /\.(jpg|png|gif|jpeg|svg)$/,
                 use: [
                     'file-loader?name=images/[name].[ext]',
-                    {
-                        loader: 'image-webpack-loader',
-                        options: {
-                            mozjpeg: {
-                                progressive: true,
-                                quality: 65
-                            },
-                            // optipng.enabled: false will disable optipng
-                            optipng: {
-                                enabled: false,
-                            },
-                            pngquant: {
-                                quality: '65-90',
-                                speed: 4
-                            },
-                            gifsicle: {
-                                interlaced: false,
-                            },
-                            // the webp option will enable WEBP
-                            webp: {
-                                quality: 75
-                            }
-                        }
-                    },
-                ],
+                    // 'file-loader?name=[name].[ext]&outputPath=../images/&publicPath=.images/',
+                    'image-webpack-loader'
+                ]
             },
+            // {
+            //     test: /\.(gif|png|jpe?g|svg)$/i,
+            //     use: [
+            //         'file-loader?name=images/[name].[ext]',
+            //         {
+            //             loader: 'image-webpack-loader',
+            //             options: {
+            //                 mozjpeg: {
+            //                     progressive: true,
+            //                     quality: 85
+            //                 },
+            //                 // optipng.enabled: false will disable optipng
+            //                 optipng: {
+            //                     enabled: false,
+            //                 },
+            //                 pngquant: {
+            //                     quality: '90',
+            //                     speed: 4
+            //                 },
+            //                 gifsicle: {
+            //                     interlaced: false,
+            //                 },
+            //                 // the webp option will enable WEBP
+            //                 webp: {
+            //                     quality: 75
+            //                 }
+            //             }
+            //         },
+            //     ],
+            // },
             {
                 test: /\.(woff2?|ttf|eot|otf|svg)$/,
                 use: 'file-loader?name=fonts/[name].[ext]'
@@ -121,7 +121,7 @@ let conf = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Index',
-            template: './src/assets/pug/pages/photo.pug',
+            template: './src/assets/pug/pages/index.pug',
             hash: true,
             // excludeChunks: ['contact'],
             // minify: {
