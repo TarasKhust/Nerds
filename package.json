@@ -25,6 +25,7 @@
     "bootstrap": "^4.0.0",
     "bootstrap-loader": "^2.2.0",
     "browser-sync": "^2.23.6",
+    "copy-webpack-plugin": "^4.5.1",
     "css-loader": "^0.28.11",
     "cssnano": "^3.10.0",
     "del": "^3.0.0",
