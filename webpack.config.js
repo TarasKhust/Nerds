@@ -15,10 +15,6 @@ let conf = {
         path: path.resolve(__dirname, 'dist'),
         // publicPath: 'dist/'
     },
-    devServer: {
-        overlay: true,
-        contentBase: 'dist'
-    },
     module: {
         rules: [
             {
@@ -56,21 +52,60 @@ let conf = {
                     publicPath: '../'
                 })
             },
+            // {
+            //     test: /\.styl$/,
+            //     use: [
+            //         { loader: 'style-loader', options: { sourceMap: true } },
+            //         { loader: 'css-loader', options: { sourceMap: true } },
+            //         { loader: 'postcss-loader', options: { sourceMap: true } },
+            //         { loader: 'stylus-loader', options: { sourceMap: true } },
+            //     ]
+            // },
             {
                 test: /\.styl$/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: ['css-loader','postcss-loader','stylus-loader'],
-                    publicPath: '../'
+                    // publicPath: '../'
                 })
             },
+            // {
+            //     test: /\.(jpg|png|gif|jpeg|svg)$/,
+            //     use: [
+            //         'file-loader?name=images/[name].[ext]',
+            //         // 'file-loader?name=[name].[ext]&outputPath=../images/&publicPath=.images/',
+            //         'image-webpack-loader'
+            //     ]
+            // },
             {
-                test: /\.(jpg|png|gif|jpeg|svg)$/,
+                test: /\.(gif|png|jpe?g|svg)$/i,
                 use: [
                     'file-loader?name=images/[name].[ext]',
-                    // 'file-loader?name=[name].[ext]&outputPath=../images/&publicPath=.images/',
-                    'image-webpack-loader'
-                ]
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            mozjpeg: {
+                                progressive: true,
+                                quality: 65
+                            },
+                            // optipng.enabled: false will disable optipng
+                            optipng: {
+                                enabled: false,
+                            },
+                            pngquant: {
+                                quality: '65-90',
+                                speed: 4
+                            },
+                            gifsicle: {
+                                interlaced: false,
+                            },
+                            // the webp option will enable WEBP
+                            webp: {
+                                quality: 75
+                            }
+                        }
+                    },
+                ],
             },
             {
                 test: /\.(woff2?|ttf|eot|otf|svg)$/,
