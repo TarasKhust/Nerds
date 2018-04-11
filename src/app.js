@@ -6,3 +6,4 @@ import avg from './math.js';
 console.log(avg(1, 4, 8));
 
 import './assets/css/style.styl';
+// import './assets/js/**/*.js';
