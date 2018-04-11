@@ -33,7 +33,7 @@ let conf = {
                 test: /\.pug$/,
                 loader: 'pug-loader',
                 options: {
-                    pretty:true
+                    pretty: true
                 }
             },
             {
@@ -45,7 +45,7 @@ let conf = {
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: ['css-loader'],
-                    publicPath: '../'
+                    // publicPath: '../'
                 })
             },
             {
@@ -53,7 +53,7 @@ let conf = {
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: ['css-loader','sass-loader'],
-                    publicPath: '../'
+                    // publicPath: '../'
                 })
             },
             // {
@@ -135,8 +135,8 @@ let conf = {
             hash: true,
             filename: 'photo.html',
             // chunks: ['contact'],
-            minify: {
-                collapseWhitespace: true },
+            // minify: {
+            //     collapseWhitespace: true },
         }),
 
         new HtmlWebpackPlugin({

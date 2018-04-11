@@ -4,13 +4,9 @@
   "description": "Webpack",
   "main": "main.js",
   "scripts": {
-    "serv": "webpack-dev-server",
-    "prod-serv": "webpack --mode production && webpack-dev-server",
-    "prod": "npm run clean && webpack -p",
     "clean": "rimraf ./dist/",
     "build": "webpack --mode production",
-    "dev": "webpack-dev-server --mode development --open",
-    "watch": "webpack --watch"
+    "dev": "webpack-dev-server --mode development --open"
   },
   "browserslist": [
     "last 2 versions",
@@ -79,11 +75,14 @@
     "gulp-webserver": "^0.9.1",
     "html-webpack-plugin": "^3.2.0",
     "image-webpack-loader": "^4.2.0",
+    "imagemin": "^5.3.1",
+    "imagemin-gifsicle": "^5.2.0",
     "imagemin-optipng": "^5.2.1",
     "jquery": "^3.3.1",
     "load-grunt-tasks": "^3.5.2",
     "node-sass": "^4.8.3",
     "normalize.css": "^8.0.0",
+    "object-assign": "^4.1.1",
     "optimize-css-assets-webpack-plugin": "^4.0.0",
     "path": "^0.12.7",
     "postcss-import": "^11.1.0",
@@ -121,6 +120,10 @@
   },
   "keywords": [],
   "dependencies": {
+    "imagemin-mozjpeg": "^7.0.0",
+    "imagemin-pngquant": "^5.1.0",
+    "imagemin-svgo": "^6.0.0",
+    "imagemin-webp": "^4.1.0",
     "postcss": "^6.0.21"
   }
 }
