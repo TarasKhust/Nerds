@@ -144,7 +144,7 @@ let conf = {
         let production = options.mode === 'production';
 
         conf.devtool = production
-                        ? 'false'
+                        ? 'source-map'
                         : 'evel-sourcemap';
 
         return conf;
