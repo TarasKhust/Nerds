@@ -1,16 +1,19 @@
-header.main__page
-	a.page-header__logo
-		img.page-header__logo-image(src=require("../../assets/images/2-layers.png"), width="75" height="22"
-		alt="Pink")
-	nav.main-nav
-		button.main-nav__toggle(type='button') Открыть меню
-		.main-nav__wrapper
-			ul.main-nav__list.site-list
-				li.site-list__item.site-list__item--active
-					a Главная
-				li.site-list__item
-					a(href='photo.html') Фотографии
-				li.site-list__item
-					a(href='form.html') Конкурс
-				li.site-list__item
-					a(href='photo.html') HTML Academy
+header.main-header
+	.main-header__wrapper
+		a.main-header__logo(href='index.html')
+			include ../../assets/images/nerds-logo.svg
+		nav.main-nav
+			ul.main-nav__list
+				li.main-nav__item
+					a(href='#') студия
+				li.main-nav__item
+					a(href='#') клиенты
+				li.main-nav__item
+					a(href='#') магазин
+				li.main-nav__item
+					a(href='#') контакты
+			a.icon-basket(href='#') Корзина
+
+
+
+

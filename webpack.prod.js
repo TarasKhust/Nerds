@@ -81,12 +81,16 @@ let conf = {
                 })
             },
             {
-                test: /\.(jpg|png|gif|jpeg|svg)$/,
+                test: /\.(jpg|png|gif|jpeg)$/,
                 use: [
                     'file-loader?name=images/[name].[ext]',
                     // 'file-loader?name=[name].[ext]&outputPath=../images/&publicPath=.images/',
                     'image-webpack-loader'
                 ]
+            },
+            {
+                test: /\.(svg)$/,
+                use: 'file-loader?name=images/icons/[name].[ext]'
             },
             // {
             //     test: /\.(gif|png|jpe?g|svg)$/i,
@@ -119,7 +123,7 @@ let conf = {
             //     ],
             // },
             {
-                test: /\.(woff2?|ttf|eot|otf|svg)$/,
+                test: /\.(woff2?|ttf|eot|otf)$/,
                 use: 'file-loader?name=fonts/[name].[ext]'
             },
         ]
@@ -136,23 +140,23 @@ let conf = {
             // },
         }),
 
-        new HtmlWebpackPlugin({
-            title: 'Photo',
-            template: './src/pug/pages/photo.pug',
-            hash: true,
-            filename: 'photo.html',
-            // chunks: ['contact'],
-            // minify: {
-            //     collapseWhitespace: true },
-        }),
-
-        new HtmlWebpackPlugin({
-            title: 'Form',
-            template: './src/pug/pages/form.pug',
-            hash: true,
-            // chunks: ['contact'],
-            filename: 'form.html',
-        }),
+        // new HtmlWebpackPlugin({
+        //     title: 'Photo',
+        //     template: './src/pug/pages/photo.pug',
+        //     hash: true,
+        //     filename: 'photo.html',
+        //     // chunks: ['contact'],
+        //     // minify: {
+        //     //     collapseWhitespace: true },
+        // }),
+        //
+        // new HtmlWebpackPlugin({
+        //     title: 'Form',
+        //     template: './src/pug/pages/form.pug',
+        //     hash: true,
+        //     // chunks: ['contact'],
+        //     filename: 'form.html',
+        // }),
 
         new webpack.ProvidePlugin({
             $: 'jquery',
