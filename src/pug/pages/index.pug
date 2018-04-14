@@ -3,7 +3,7 @@ block title
 	| Nёrds - главная
 block main
 	include ../modules/header
-	main.page__offers
+	main.page
 		h1.visually-hidden Содание сайтов под ключ
 		section.offers
 			.offers__list
@@ -12,21 +12,19 @@ block main
 					alt="offers-img__website")
 					h3.offers__title Веб-сайты
 					p.offers__description Мир никогда не будет прежним после того как увидит ваш сайт!
-					a.offers__buton(class='button' href='#') заказать
-			.offers__list
+					a.offers__button--red(class='button' href='#') заказать
 				.offers__items
 					img.offers__img(src=require('../../assets/images/illustration-2-jpg.jpg'), width="300" height="146"
 					alt="offers-img__website")
 					h3.offers__title Приложения
 					p.offers__description Покорите топ-10 приложений в AppStore и Google Play
-					a.offers__butona(class='button' href='#') заказать
-			.offers__list
-				.offers__item
+					a.offers__button--green(class='button' href='#') заказать
+				.offers__items
 					img.offers__img(src=require('../../assets/images/illustration-3-jpg.jpg'), width="300" height="146"
 					alt="offers-img__website")
 					h3.offers__title Презентации
 					p.offers__description Вы даже не подозреваете, насколько вы изумительны!
-					a.offers__buton(class='button' href='#') заказать
+					a.offers__button--yellow(class='button'  href='#') заказать
 
 	include ../modules/footer
 
