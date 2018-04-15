@@ -26,6 +26,25 @@ block main
 					p.offers__description Вы даже не подозреваете, насколько вы изумительны!
 					a.offers__button--yellow(class='button'  href='#') заказать
 		hr.offers__line
+		section.about
+			.about__wrapper
+				.about-wrapper__about
+					h2.about__title Мы — маленькая, но гордая дизайн-студия из Краснодара.
+					p.about__description Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.
+					b.about__list-title Выполняем заказы на разработку:
+					ul.about__list
+						li.about__item Веб-сайтов любой сложности
+						li.about__item Мобильных приложений для iOS и Android
+						li.about__item Слайдшоу и видео для корпоративных презентаций
+				.container
+					img.about__logo(src=require('../../assets/images/nerds-illustration-jpg.jpg'), width="360" height="140" alt="ilustrtion__logo")
+					b.about__title--right с 2004 года Любим точность во всем:
+					ul.about__list--right
+						li.about__item--right Уровень самоотдачи
+						li.about__item--right Соблюдение сроков
+						li.about__item--right Минимальная предоплата
+		hr.about__line
+
 
 	include ../modules/footer
 
