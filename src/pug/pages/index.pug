@@ -53,21 +53,26 @@ block main
 							td Соблюдение сроков
 							td Минимальная предоплата
 			hr.line
-			.studio__brends
-				ul.studio__brends__list
-					li.studio__brends__item
-						img.studio__brends__img(src=require('../../assets/images/logo-1-png.png'), width="199" height="68"
+		section.customers
+			.customers__wrap
+				ul.customers__list
+					li.customers__item
+						a.custumer__link(href='#')
+							img.customers__img(src=require('../../assets/images/logo-1.png'), width="199" height="68"
 						alt="html-academy")
-					li.studio__brends__item
-						img.studio__brends__img(src=require('../../assets/images/logo-2-png.png'), width="209" height="90"
-						alt="Borodinski")
-					li.studio__brends__item
-						img.studio__brends__img(src=require('../../assets/images/logo-3-png.png'), width="185" height="52"
-						alt="pink")
-					li.studio__brends__item
-						img.studio__brends__img(src=require('../../assets/images/logo-4-png.png'), width="173" height="84"
-						alt="mishka")
-		hr.line
+					li.customers__item
+						a.custumer__link(href='#')
+							img.customers__img(src=require('../../assets/images/logo-2.png'), width="209" height="90"
+							alt="Borodinski")
+					li.customers__item
+						a.custumer__link(href='#')
+							img.customers__img(src=require('../../assets/images/logo-3.png'), width="185" height="52"
+							alt="pink")
+					li.customers__item
+						a.custumer__link(href='#')
+							img.customers__img(src=require('../../assets/images/logo-4.png'), width="173" height="84"
+							alt="mishka")
+				hr.line
 
 
 	include ../modules/footer
