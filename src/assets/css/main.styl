@@ -17,3 +17,182 @@ hr
 	color #eeeeee
 	display block
 	opacity 0.2
+img
+	max-width 100%
+	height auto
+.visually-hidden
+	hidden()
+.map
+	width 1440px
+	display flex
+	justify-content center
+	padding 0px 10px
+	margin 0 auto
+	position relative
+	margin-bottom 67px
+.map-feedback__img
+	width 1440px
+	height 416px
+.map-feedback
+	width 319px
+	background-color white
+	position absolute
+	left 140px
+	top 54px
+.map-feedback__wrapper
+	display flex
+	flex-direction column
+	align-items left
+	margin 0 auto
+	padding 50px 50px
+	width 219px
+	h3
+		color #000000
+		font-size 18px
+		font-weight bold
+		line-height 30px
+		text-transform uppercase
+		margin 0
+	p, span
+		color #666666
+		font-size baseFontSize
+		font-weight regular
+		line-height 18px
+		display inline-block
+		vertical-align middle
+		box-sizing border-box
+.button__feedback
+	display inline-block
+	padding 19px 10px
+	background-color #fb565a
+	vertical-align middle
+	box-sizing border-box
+	color #ffffff
+	font-size baseFontSize
+	font-weight medium
+	line-height 18px
+	text-transform uppercase
+	border none
+	margin-top 37px
+.customers
+	margin-bottom: 80px
+.map-feedback__wear
+	position absolute
+	top 90px
+	left 830px
+.contacts__wrap
+	width 1200px
+	display flex
+	justify-content space-between
+	padding 0px 10px
+	margin 10px auto
+.contacts__list
+	display flex
+.contacts__link
+	display inline-flex
+	justify-content center
+	align-items center
+	width 81px
+	height 81px
+	border-radius 50%
+	background-color #e1e1e1
+	position relative
+	margin-right 10px
+.container-contacts
+	margin-right  130px
+.contacts__title
+	color #000000
+	font-size 36px
+	font-weight bold
+	line-height 36px
+.slider__wrapper
+	background-color rgb(238, 238, 238)
+	background-position center
+	background-repeat repeat
+.slider
+	position relative
+	width 1265px
+	height 421px
+	margin 0 auto
+.slider input[type=radio] 
+	position absolute
+	opacity 0
+.slider-controls
+	position absolute
+	bottom 95px
+	left 50%
+	width 200px
+	height 10px
+	margin-left -10px
+	text-align center
+	z-index 1000
+.slider-controls label
+	display inline-block
+	width 10px
+	height 10px
+	margin 0 3px
+	background white
+	border 3px solid white
+	vertical-align top
+	border-radius 50%
+	cursor pointer
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"] 
+	background #c1c1c1
+.slide
+	position absolute
+	top 0
+	left 0
+	width 100%
+	height 100%
+	overflow hidden
+.slide-text
+	width 420px
+	padding 30px 0
+	color #283136
+	margin-left 50px
+	margin-top 46px
+.slide-text p
+	margin-bottom 42px
+.slide-title
+	line-height 1
+	font-weight bold
+	color:black
+	margin-bottom 28px
+	font-size: 55px;
+.slide .btn
+	display block
+	width 240px
+	padding 19px 0
+	margin-top 25px
+	color white
+	text-transform uppercase
+	text-align center
+	text-decoration none
+	background #fb565a
+	border-radius 3px
+	font-size: baseFontSize
+	font-weight: medium
+	line-height: 18px
+.slide:nth-child(1)
+	background-image url('../images/slide1.png')
+	background-repeat no-repeat
+	background-position 90% 10px
+.slide:nth-child(2)
+	background-image url('../images/slide2.png')
+	background-repeat no-repeat
+	background-position 90% 10px
+.slide:nth-child(3)
+	background-image url('../images/slide3.png')
+	background-repeat no-repeat
+	background-position 90% 0
+.slide
+	display none
+#btn-1:checked ~ .slides .slide:nth-child(1) 
+	display block
+#btn-2:checked ~ .slides .slide:nth-child(2) 
+	display block
+#btn-3:checked ~ .slides .slide:nth-child(3) 
+	display block
+	
