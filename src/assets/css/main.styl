@@ -114,7 +114,7 @@ img
 	width 1265px
 	height 421px
 	margin 0 auto
-.slider input[type=radio] 
+.slider input[type=radio]
 	position absolute
 	opacity 0
 .slider-controls
@@ -138,7 +138,7 @@ img
 	cursor pointer
 #btn-1:checked ~ .slider-controls label[for="btn-1"],
 #btn-2:checked ~ .slider-controls label[for="btn-2"],
-#btn-3:checked ~ .slider-controls label[for="btn-3"] 
+#btn-3:checked ~ .slider-controls label[for="btn-3"]
 	background #c1c1c1
 .slide
 	position absolute
@@ -189,10 +189,121 @@ img
 	background-position 90% 0
 .slide
 	display none
-#btn-1:checked ~ .slides .slide:nth-child(1) 
+#btn-1:checked ~ .slides .slide:nth-child(1)
 	display block
-#btn-2:checked ~ .slides .slide:nth-child(2) 
+#btn-2:checked ~ .slides .slide:nth-child(2)
 	display block
-#btn-3:checked ~ .slides .slide:nth-child(3) 
+#btn-3:checked ~ .slides .slide:nth-child(3)
 	display block
-	
+//@keyframes move-slider {
+//	100% {transform: translate(50px, 100px);}
+//	20% {transform: translateX(50px);}
+//	40% {transform: translateY(50px);}
+//	60% {transform: translateX(50px);}
+//}
+//@keyframes move-clouds {
+//	20% {transform: translateX(50px);}
+//	40% {transform: translateY(50px);}
+//	60% {transform: translateX(50px);}
+//	80% {transform: translateY(50px);}
+//	90% {transform: rotate(180deg);}
+//	100% {transform: scale(2, 0.5);}
+//}
+//
+//.slide:nth-child(n)
+//{
+//	animation-name: move-clouds, move-slider;
+//	animation-duration: 3s, 1s;
+//	animation-delay: 250ms;
+//	animation-play-state: running;
+//	animation-iteration-count: 2;
+//	animation-timing-function: ease-in-out;
+//
+//}
+//.main-nav__item a {
+//	animation-name: vibrate;
+//	animation-duration: 2s;
+//	animation-iteration-count: infinite;
+//}
+//
+//@keyframes vibrate {
+//	50% {
+//		transform: scale(1.2);
+//	}
+//}
+//
+//@keyframes power {
+//	0% {
+//		width: 150px;
+//		color: #01ff70;
+//	}
+//	50% {
+//		bcolor: #ffdc00;
+//	}
+//	100% {
+//		width: 30px;
+//		color: #ff4136;
+//	}
+//}
+//.main-nav__item a {
+//	animation-name: power;
+//	animation-duration: 2s;
+//	animation-delay: 2s;
+//	animation-iteration-count: infinite;
+//}
+//.main-nav__item a {
+//	animation-name: power;
+//	animation-fill-mode: backwards;
+//	animation-iteration-count: infinite;
+//}
+.main-header__logo:hover path,
+.main-header__logo:focus path
+	opacity: 0.3;
+.main-nav a:hover,
+.main-nav a:focus
+	color red
+.main-nav a:active
+	opacity 0.3
+	color #000000
+.slide .btn:hover,
+.slide .btn:focus,
+.offers__button--red:hover,
+.offers__button--red:focus,
+.button__feedback:hover,
+.button__feedback:focus{
+	background-color #e74246
+}
+.slide .btn:active,
+.offers__button--red:active,
+.button__feedback:active {
+	background-color #d7373b
+	box-shadow inset 0 3px 0 rgba(0, 1, 1, 0.1)
+	color rgb(204, 205, 206)
+}
+.offers__button--green:hover,
+.offers__button--green:focus
+	background-color #00bc6c
+.offers__button--green:active
+	background-color #00aa62
+	box-shadow inset 0 3px 0 rgba(0, 1, 1, 0.1)
+	color rgb(204, 205, 206)
+
+.offers__button--yellow:hover,
+.offers__button--yellow:focus
+	background-color #eab534
+.offers__button--yellow:active
+	box-shadow inset 0 3px 0 rgba(0, 1, 1, 0.1)
+	color rgb(204, 205, 206)
+	background-color #e5a722
+.customers__item img:hover,
+.customers__item img:focus
+	opacity 1
+.customers__item img:active
+	opacity 0.1
+.contacts__link:hover,
+.contacts__link:focus
+	background-color #e74246
+.contacts__link:active
+	background-color #d7373b
+	box-shadow inset 0 3px 0 rgba(0, 1, 1, 0.1)
+	color rgb(204, 205, 206)
