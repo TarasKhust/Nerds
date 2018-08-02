@@ -1,0 +1,16 @@
+section.modal.modal__contact
+	.modal-container
+		h1.modal__title Напишите нам
+		form.login__form(action='/echo' method='post')
+			.container__modal
+				p.modal__login__item
+					label(for='user-login') Ваше имя:
+					input#user-login.user__login(type='text' name='username' required='' placeholder='Представьтесь, пожалуйста')
+				p.modal__login__item
+					label(for='email') Ваш email:
+					input.login-icon-email#email(type='email' name='email' required='' placeholder='Для отправки ответа')
+			p.login-password__item
+				label(for='text') Текст письма:
+				input#text(type='text' name='text' placeholder='В свободной форме' required='')
+			button.button.button-exit(type='submit') Отправить
+			button.modal__close(type='button') Закрыть

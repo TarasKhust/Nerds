@@ -24,8 +24,10 @@ let conf = {
         extensions: ['.js', '.css', '.scss']
     },
     devServer: {
-        overlay: true,
-        // contentBase: 'dist'
+        overlay: {
+            warning: true,
+            errors: true
+        }
     },
     module: {
         rules: [

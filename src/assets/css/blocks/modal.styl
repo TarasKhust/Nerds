@@ -1,0 +1,114 @@
+.modal
+	display none
+	top 7%
+	left 16%
+	position fixed
+	width 770px
+	margin 0
+	padding 73px 90px 90px 99px
+	box-shadow 0 20px 40px rgba(0, 1, 1, 0.75)
+	background-color white
+	h1
+		color #000000
+		font-size 45px
+		font-weight bold
+		line-height 45px
+		margin 0
+	p
+		flex-direction column
+		color #000000
+		font-size baseFontSize
+		font-weight bold
+		line-height 18px
+.button-exit
+	width auto
+	height auto
+	background-color red
+	vertical-align middle
+	padding 18px 83px
+	color #ffffff
+.modal-container
+	display flex
+	flex-direction column
+	margin 0
+.login__form input[type='text'],
+.login__form input[type='email']
+	width 360px
+	height auto
+	border 2px solid #d7dcde
+	background-color #ffffff
+	padding 18px 16px 16px 16px
+	box-sizing border-box
+.login__form input[id='text']
+	padding-bottom 87px
+	display inline-block
+	box-sizing border-box
+	width 100%
+	margin-bottom 37px
+.login__form label
+	display block
+	margin-bottom 12px
+.container__modal
+	display flex
+	justify-content space-between
+.modal__login__item
+	margin-top 40px
+.modal__close
+	position absolute
+	top 84px
+	right 84px
+	width 22px
+	height 22px
+	font-size 0
+	border 0
+	cursor pointer
+	background-color transparent
+	&:before
+		transform rotate(45deg)
+		content ""
+		position absolute
+		width 21px
+		height 4px
+		background-color #fb565a
+		top 10px
+		left 2px
+		opacity 0.3
+	&:after
+		content ""
+		position absolute
+		transform rotate(-45deg)
+		width 21px
+		height 4px
+		background-color #fb565a
+		top 10px
+		left 2px
+		opacity 0.3
+.modal-show
+	display block
+	animation-name bounce
+	animation-duration 0.6s
+
+.modal-error
+	animation-name shake
+	aimation-duration 0.6s
+
+@keyframes shake {
+	0%, 100% {transform: translateX(0);}
+	10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+	20%, 40%, 60%, 80% {transform: translateX(10px);}
+}
+
+@keyframes bounce {
+	0% {
+		transform: translateY(-2000px);
+	}
+	70% {
+		transform: translateY(30px);
+	}
+	90% {
+		transform: translateY(-10px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
