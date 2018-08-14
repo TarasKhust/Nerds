@@ -82,15 +82,22 @@
 		background-color #fb565a
 		top 10px
 		left 2px
-		opacity 0.3
+		opacity 0.7
 .modal-show
 	display block
 	animation-name bounce
 	animation-duration 0.6s
+	opacity 1
+	overflow-x hidden
+	overflow-y auto
+	z-index 1050
+	outline 0
 
 .modal-error
 	animation-name shake
 	aimation-duration 0.6s
+.modal-opacity
+	opacity 1
 
 @keyframes shake {
 	0%, 100% {transform: translateX(0);}
